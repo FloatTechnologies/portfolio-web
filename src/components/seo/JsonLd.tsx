@@ -26,7 +26,7 @@ export function JsonLd() {
         jobTitle: profile.tagline,
         email: profile.email,
         url: base,
-        sameAs: [profile.githubUrl, profile.linkedinUrl],
+        sameAs: [profile.githubUrl, profile.linkedinUrl, profile.mediumUrl],
         knowsAbout: profile.seoKeywords.filter(
           (k) => !k.includes("Muhammad") && !k.includes("Omer"),
         ),

@@ -41,12 +41,17 @@ export const profile: Profile = {
       href: "https://github.com/omerxhafique",
     },
     {
+      label: "Medium",
+      href: "https://medium.com/@omershafique",
+    },
+    {
       label: "Email",
       href: "mailto:omerxhafique@gmail.com",
     },
   ],
   githubUrl: "https://github.com/omerxhafique",
   linkedinUrl: "https://www.linkedin.com/in/omershafique/",
+  mediumUrl: "https://medium.com/@omershafique",
   resumeUrl:
     "https://drive.google.com/file/d/1P4qzJ7m9OBBeDR6rovBTR9cj2l4QDIda/view?usp=sharing",
   siteUrl: getSiteUrl(),

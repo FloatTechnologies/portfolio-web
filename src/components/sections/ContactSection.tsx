@@ -52,6 +52,14 @@ export function ContactSection() {
               >
                 LinkedIn
               </a>
+              <a
+                href={profile.mediumUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline w-full sm:w-auto"
+              >
+                Medium
+              </a>
             </div>
           </div>
         </div>

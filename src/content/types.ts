@@ -20,6 +20,7 @@ export type Profile = {
   siteUrl: string;
   githubUrl: string;
   linkedinUrl: string;
+  mediumUrl: string;
   /** Meta description (~150–160 chars) for HTML, Open Graph, and JSON-LD. */
   metaDescription: string;
   seoKeywords: string[];
