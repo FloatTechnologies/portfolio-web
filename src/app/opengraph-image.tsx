@@ -2,6 +2,7 @@ import { ImageResponse } from "next/og";
 import { profile } from "@/content/profile";
 import { siteDescription, siteTitle } from "@/lib/seo";
 
+export const dynamic = "force-static";
 export const alt = siteTitle;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";

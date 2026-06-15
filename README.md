@@ -2,7 +2,7 @@
 
 Personal portfolio site built with [Next.js](https://nextjs.org) (App Router), React, and Tailwind CSS.
 
-**Live:** [https://omerxhafique.vercel.app](https://omerxhafique.vercel.app)
+**Live:** [https://omerxhafique.vercel.app](https://omerxhafique.vercel.app) · [https://omerxhafique.github.io](https://omerxhafique.github.io)
 
 ## Stack
 
@@ -47,7 +47,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | Command        | Description              |
 |----------------|--------------------------|
 | `npm run dev`  | Development server       |
-| `npm run build`| Production build         |
+| `npm run build`| Production build (Vercel) |
+| `npm run build:pages` | Static export to `out/` for GitHub Pages |
 | `npm run start`| Serve production build   |
 | `npm run lint` | ESLint                   |
 
@@ -63,7 +64,22 @@ Set these in Vercel under **Project → Settings → Environment Variables** for
 ## CI/CD
 
 - **CI:** GitHub Actions runs lint and build on pushes and pull requests to `main` (see `.github/workflows/ci.yml`).
-- **CD:** Pushes to `main` trigger a Vercel production deployment when the repo is connected in the Vercel dashboard (**Settings → Git**, production branch `main`). No `VERCEL_*` secrets are required in GitHub for this setup.
+- **Vercel CD:** Pushes to `main` deploy via Vercel Git integration (`NEXT_PUBLIC_SITE_URL` = your Vercel URL).
+- **GitHub Pages CD:** On push to `main`, `.github/workflows/deploy-github-pages.yml` builds with `npm run build:pages` and publishes `out/` to [omerxhafique/omerxhafique.github.io](https://github.com/omerxhafique/omerxhafique.github.io).
+
+### GitHub Pages setup (one-time)
+
+1. Create a [Personal Access Token](https://github.com/settings/tokens) (classic) with **`repo`** scope for account `omerxhafique`.
+2. In **FloatTechnologies/portfolio-web** → **Settings → Secrets and variables → Actions**, add **`GH_PAGES_DEPLOY_TOKEN`** with that token.
+3. On [omerxhafique.github.io](https://github.com/omerxhafique/omerxhafique.github.io) → **Settings → Pages**, set **Source** to deploy from branch **`main`** / **`/ (root)`**.
+4. Push to `main` or run the **Deploy GitHub Pages** workflow manually.
+
+Local preview of the Pages build:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://omerxhafique.github.io npm run build:pages
+npx serve out
+```
 
 ## Repository
 
