@@ -2,7 +2,8 @@
 
 Personal portfolio site built with [Next.js](https://nextjs.org) (App Router), React, and Tailwind CSS.
 
-**Live:** [https://omerxhafique.vercel.app](https://omerxhafique.vercel.app) · [https://omerxhafique.github.io](https://omerxhafique.github.io)
+**Portfolio:** [https://omerxhafique.vercel.app](https://omerxhafique.vercel.app)  
+**Also mirrored on:** [GitHub Pages](https://omerxhafique.github.io) (same site; canonical URL is Vercel)
 
 ## Stack
 
@@ -77,7 +78,7 @@ Set these in Vercel under **Project → Settings → Environment Variables** for
 Local preview of the Pages build:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://omerxhafique.github.io npm run build:pages
+NEXT_PUBLIC_SITE_URL=https://omerxhafique.vercel.app npm run build:pages
 npx serve out
 ```
 

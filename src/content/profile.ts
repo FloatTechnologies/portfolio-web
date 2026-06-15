@@ -1,5 +1,5 @@
 import type { Profile } from "./types";
-import { getSiteUrl } from "@/lib/site-url";
+import { canonicalSiteUrl, getSiteUrl } from "@/lib/site-url";
 
 export const profile: Profile = {
   name: "Muhammad Omer Shafique",
@@ -28,6 +28,10 @@ export const profile: Profile = {
     "Clear communication in PRs, docs, mentoring, and incident follow-ups",
   ],
   social: [
+    {
+      label: "Portfolio",
+      href: canonicalSiteUrl,
+    },
     {
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/omershafique/",

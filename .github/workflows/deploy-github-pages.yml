@@ -24,7 +24,7 @@ jobs:
       - run: npm ci
       - run: npm run build:pages
         env:
-          NEXT_PUBLIC_SITE_URL: https://omerxhafique.github.io
+          NEXT_PUBLIC_SITE_URL: https://omerxhafique.vercel.app
 
       - run: touch out/.nojekyll
 
