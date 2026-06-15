@@ -1,4 +1,5 @@
 import type { Profile } from "./types";
+import { getSiteUrl } from "@/lib/site-url";
 
 export const profile: Profile = {
   name: "Muhammad Omer Shafique",
@@ -44,9 +45,7 @@ export const profile: Profile = {
   linkedinUrl: "https://www.linkedin.com/in/omershafique/",
   resumeUrl:
     "https://drive.google.com/file/d/1P4qzJ7m9OBBeDR6rovBTR9cj2l4QDIda/view?usp=sharing",
-  siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://omerxhafique.vercel.app",
+  siteUrl: getSiteUrl(),
   metaDescription:
     "Muhammad Omer Shafique — full stack developer building Python APIs, cloud systems, GenAI features, and React, Flutter, and Swift clients. Pakistan · remote-friendly.",
   seoKeywords: [
