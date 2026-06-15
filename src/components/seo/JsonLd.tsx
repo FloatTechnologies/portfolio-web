@@ -1,47 +1,66 @@
 import { profile } from "@/content/profile";
+import { projects } from "@/content/projects";
+import { siteDescription } from "@/lib/seo";
+
+function projectUrl(project: (typeof projects)[number]) {
+  return (
+    project.demoLink ??
+    project.githubLink ??
+    project.appStoreLink ??
+    project.playStoreLink ??
+    `${profile.siteUrl}/#projects`
+  );
+}
 
 export function JsonLd() {
+  const base = profile.siteUrl.replace(/\/$/, "");
+
   const data = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": `${profile.siteUrl}/#person`,
+        "@id": `${base}/#person`,
         name: profile.name,
+        alternateName: profile.introName,
         jobTitle: profile.tagline,
         email: profile.email,
-        url: profile.siteUrl,
+        url: base,
         sameAs: [profile.githubUrl, profile.linkedinUrl],
-        knowsAbout: [
-          "Full Stack Development",
-          "Python",
-          "Django",
-          "FastAPI",
-          "Flask",
-          "React",
-          "Flutter",
-          "AWS",
-          "Generative AI",
-          "Software Engineering",
-        ],
+        knowsAbout: profile.seoKeywords.filter(
+          (k) => !k.includes("Muhammad") && !k.includes("Omer"),
+        ),
       },
       {
         "@type": "WebSite",
-        "@id": `${profile.siteUrl}/#website`,
-        url: profile.siteUrl,
+        "@id": `${base}/#website`,
+        url: base,
         name: `${profile.name} — ${profile.tagline}`,
-        description: profile.heroLead,
-        publisher: { "@id": `${profile.siteUrl}/#person` },
+        description: siteDescription,
+        publisher: { "@id": `${base}/#person` },
         inLanguage: "en",
       },
       {
         "@type": "ProfilePage",
-        "@id": `${profile.siteUrl}/#profilepage`,
-        url: profile.siteUrl,
+        "@id": `${base}/#profilepage`,
+        url: base,
         name: profile.name,
-        isPartOf: { "@id": `${profile.siteUrl}/#website` },
-        about: { "@id": `${profile.siteUrl}/#person` },
+        isPartOf: { "@id": `${base}/#website` },
+        about: { "@id": `${base}/#person` },
         description: profile.about,
+        mainEntity: { "@id": `${base}/#person` },
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${base}/#projects`,
+        name: "Portfolio projects",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: project.title,
+          url: projectUrl(project),
+          description: project.description,
+        })),
       },
     ],
   };

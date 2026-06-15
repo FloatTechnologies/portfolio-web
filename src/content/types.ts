@@ -20,6 +20,11 @@ export type Profile = {
   siteUrl: string;
   githubUrl: string;
   linkedinUrl: string;
+  /** Meta description (~150–160 chars) for HTML, Open Graph, and JSON-LD. */
+  metaDescription: string;
+  seoKeywords: string[];
+  /** ISO date for sitemap lastmod (update when site content changes). */
+  siteContentUpdated: string;
 };
 
 /** Narrative fields explain why and how; description is the short “what”. */

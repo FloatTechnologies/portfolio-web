@@ -47,4 +47,20 @@ export const profile: Profile = {
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL ??
     "https://omer-shafique.vercel.app",
+  metaDescription:
+    "Muhammad Omer Shafique — full stack developer building Python APIs, cloud systems, GenAI features, and React, Flutter, and Swift clients. Pakistan · remote-friendly.",
+  seoKeywords: [
+    "Muhammad Omer Shafique",
+    "Omer Shafique",
+    "full stack developer",
+    "software engineer Pakistan",
+    "Python",
+    "Django",
+    "FastAPI",
+    "React",
+    "Flutter",
+    "AWS",
+    "generative AI",
+  ],
+  siteContentUpdated: "2026-06-15",
 };

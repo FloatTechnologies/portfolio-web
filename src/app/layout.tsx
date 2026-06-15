@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import { profile } from "@/content/profile";
+import { siteDescription, siteTitle } from "@/lib/seo";
 import { Analytics } from "@/components/analytics/Analytics";
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -22,44 +23,28 @@ const sourceSerif = Source_Serif_4({
   weight: ["500", "600"],
 });
 
-const title = `${profile.name} — ${profile.tagline}`;
-const description =
-  "Full stack developer building Python APIs, cloud systems, GenAI features, and React, Flutter, and Swift clients. Based in Pakistan, open to remote work.";
+const title = siteTitle;
 
 export const metadata: Metadata = {
   metadataBase: new URL(profile.siteUrl),
   title: { default: title, template: `%s | ${profile.name}` },
-  description,
-  keywords: [
-    "Muhammad Omer Shafique",
-    "Omer Shafique",
-    "full stack developer",
-    "software engineer Pakistan",
-    "Python",
-    "Django",
-    "FastAPI",
-    "React",
-    "Flutter",
-    "AWS",
-    "generative AI",
-  ],
+  description: siteDescription,
+  keywords: profile.seoKeywords,
   authors: [{ name: profile.name, url: profile.siteUrl }],
   creator: profile.name,
   alternates: { canonical: "/" },
   openGraph: {
-    type: "profile",
+    type: "website",
     locale: "en_US",
     url: profile.siteUrl,
     title,
-    description,
+    description: siteDescription,
     siteName: profile.name,
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: profile.name }],
   },
   twitter: {
     card: "summary_large_image",
     title,
-    description,
-    images: ["/og.png"],
+    description: siteDescription,
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },

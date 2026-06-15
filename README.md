@@ -15,7 +15,7 @@ Personal portfolio site built with [Next.js](https://nextjs.org) (App Router), R
 
 ```
 src/
-  app/                 # Routes, layout, global styles, SEO (robots, sitemap)
+  app/                 # Routes, layout, global styles, SEO (robots, sitemap, OG images)
   components/
     analytics/         # Optional Google Analytics
     layout/            # Header, footer, chrome
@@ -27,7 +27,6 @@ src/
   lib/                 # Small utilities
 public/
   projects/            # Project thumbnails
-  og.png               # Open Graph image
 .github/workflows/     # CI (lint + build on push/PR to main)
 ```
 
