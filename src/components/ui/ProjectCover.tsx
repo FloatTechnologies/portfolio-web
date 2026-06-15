@@ -47,6 +47,7 @@ export function ProjectCover({
         <div className="absolute inset-0 bg-gradient-to-t from-[#06080f]/85 via-[#06080f]/30 to-[#06080f]/10" />
         <div className="absolute inset-0 flex items-center justify-center p-6">
           <span
+            aria-hidden
             className={cn(
               "font-serif text-4xl font-medium tracking-tight text-white/90 sm:text-5xl",
               initialsClassName,
