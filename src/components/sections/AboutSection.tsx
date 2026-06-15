@@ -4,7 +4,7 @@ import { profile } from "@/content/profile";
 export function AboutSection() {
   return (
     <section id="about" className="py-[var(--section-y)]">
-      <div className="container-wide grid gap-12 lg:grid-cols-2 lg:items-center">
+      <div className="container-wide grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div>
           <p className="section-eyebrow">About me</p>
           <h2 className="text-section-title mt-3 text-foreground">

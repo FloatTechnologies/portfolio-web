@@ -2,7 +2,7 @@ import { profile } from "@/content/profile";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-[var(--border)] bg-[var(--background-elevated)] py-14">
+    <footer className="border-t border-[var(--border)] bg-[var(--background-elevated)] py-10 sm:py-14">
       <div className="container-wide grid gap-10 md:grid-cols-2">
         <div>
           <p className="text-xl font-bold text-foreground">{profile.name}</p>
@@ -36,7 +36,7 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
-      <p className="container-wide mt-12 text-center text-xs text-muted sm:text-left">
+      <p className="container-wide mt-8 text-center text-xs text-muted sm:mt-12 sm:text-left">
         © {new Date().getFullYear()} {profile.name}.
       </p>
     </footer>

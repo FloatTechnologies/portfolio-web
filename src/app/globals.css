@@ -19,8 +19,8 @@
 
   --container: 44rem;
   --container-wide: 76rem;
-  --section-y: clamp(4rem, 9vw, 6rem);
-  --page-x: clamp(1.25rem, 4vw, 2rem);
+  --section-y: clamp(3rem, 7vw, 6rem);
+  --page-x: clamp(1rem, 4vw, 2rem);
 
   --radius-xl: 1.125rem;
 }
@@ -40,15 +40,18 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   position: relative;
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
@@ -94,21 +97,21 @@ body {
 }
 
 .text-display {
-  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
-  line-height: 1.08;
+  font-size: clamp(1.875rem, 5.5vw, 3.75rem);
+  line-height: 1.1;
   letter-spacing: -0.03em;
   font-weight: 700;
 }
 
 .text-section-title {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-  line-height: 1.15;
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  line-height: 1.18;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 
 .text-lead {
-  font-size: 1.0625rem;
+  font-size: clamp(1rem, 2.5vw, 1.0625rem);
   line-height: 1.7;
   color: var(--muted);
 }
@@ -150,8 +153,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 2.75rem;
   border-radius: 9999px;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: #06080f;
@@ -168,7 +172,8 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.25rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--foreground);

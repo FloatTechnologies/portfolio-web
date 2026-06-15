@@ -5,7 +5,7 @@ export function ContactSection() {
     <section id="contact" className="py-[var(--section-y)]">
       <div className="container-wide">
         <div className="gradient-border max-w-3xl">
-          <div className="relative overflow-hidden p-8 sm:p-10 lg:p-12">
+          <div className="relative overflow-hidden p-6 sm:p-10 lg:p-12">
             <div
               className="pointer-events-none absolute -right-20 -top-20 size-64 rounded-full bg-[var(--accent-muted)] blur-3xl"
               aria-hidden
@@ -20,19 +20,19 @@ export function ContactSection() {
             </p>
             <a
               href={`mailto:${profile.email}`}
-              className="mt-6 inline-block text-xl font-semibold text-foreground hover:text-primary sm:text-2xl"
+              className="mt-6 inline-block break-all text-lg font-semibold text-foreground hover:text-primary sm:break-normal sm:text-2xl"
             >
               {profile.email}
             </a>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <a href={`mailto:${profile.email}`} className="btn-primary">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+              <a href={`mailto:${profile.email}`} className="btn-primary w-full sm:w-auto">
                 Email me
               </a>
               <a
                 href={profile.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto"
               >
                 Resume
               </a>
@@ -40,7 +40,7 @@ export function ContactSection() {
                 href={profile.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto"
               >
                 GitHub
               </a>
@@ -48,7 +48,7 @@ export function ContactSection() {
                 href={profile.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline"
+                className="btn-outline w-full sm:w-auto"
               >
                 LinkedIn
               </a>

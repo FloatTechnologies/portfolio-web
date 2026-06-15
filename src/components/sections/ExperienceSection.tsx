@@ -13,7 +13,7 @@ export function ExperienceSection() {
           Full-stack delivery across APIs, cloud, GenAI, and client apps—at
           agencies and product teams.
         </p>
-        <div className="mt-10 max-w-3xl">
+        <div className="mt-8 max-w-3xl sm:mt-10">
           <Timeline items={workHistory} />
         </div>
       </div>

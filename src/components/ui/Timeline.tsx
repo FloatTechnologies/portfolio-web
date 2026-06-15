@@ -6,7 +6,7 @@ export function Timeline({ items }: { items: ExperienceEntry[] }) {
       {items.map((item) => (
         <li
           key={`${item.company}-${item.duration}`}
-          className="surface-card p-6 sm:p-7"
+          className="surface-card p-5 sm:p-7"
         >
           <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
             <div>

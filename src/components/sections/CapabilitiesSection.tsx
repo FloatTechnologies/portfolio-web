@@ -25,11 +25,11 @@ export function CapabilitiesSection() {
         <h2 className="text-section-title mt-3 max-w-2xl text-foreground">
           How I help teams ship full-stack products
         </h2>
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {capabilities.map((cap) => {
             const Icon = icons[cap.id];
             return (
-              <li key={cap.id} className="surface-card p-6 sm:p-7">
+              <li key={cap.id} className="surface-card p-5 sm:p-7">
                 <div className="flex size-11 items-center justify-center rounded-lg bg-[var(--accent-muted)] text-primary">
                   <Icon className="size-5" aria-hidden />
                 </div>

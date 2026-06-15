@@ -21,7 +21,7 @@ export function ProjectShowcase() {
           </Link>
         </div>
 
-        <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <ul className="mt-8 grid gap-8 sm:mt-14 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
           {projects.map((project) => (
             <li key={project.title}>
               <ProjectShowcaseTile project={project} />

@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-14 pb-16 sm:pt-20 sm:pb-24"
+      className="relative overflow-hidden pt-10 pb-12 sm:pt-20 sm:pb-24"
       aria-labelledby="hero-title"
     >
       <div
@@ -24,11 +24,11 @@ export function Hero() {
           </span>
         </h1>
         <p className="text-lead mt-6 max-w-2xl">{profile.heroLead}</p>
-        <div className="mt-9 flex flex-wrap gap-4">
-          <a href={`mailto:${profile.email}`} className="btn-primary">
+        <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap sm:gap-4">
+          <a href={`mailto:${profile.email}`} className="btn-primary w-full sm:w-auto">
             {profile.connectCta}
           </a>
-          <a href="#projects" className="btn-outline">
+          <a href="#projects" className="btn-outline w-full sm:w-auto">
             See my work
           </a>
         </div>
