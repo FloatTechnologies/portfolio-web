@@ -45,5 +45,6 @@ export const profile: Profile = {
   resumeUrl:
     "https://drive.google.com/file/d/1P4qzJ7m9OBBeDR6rovBTR9cj2l4QDIda/view?usp=sharing",
   siteUrl:
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://omershafique.dev",
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    "https://omer-shafique.vercel.app",
 };
