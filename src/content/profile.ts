@@ -46,7 +46,7 @@ export const profile: Profile = {
     "https://drive.google.com/file/d/1P4qzJ7m9OBBeDR6rovBTR9cj2l4QDIda/view?usp=sharing",
   siteUrl:
     process.env.NEXT_PUBLIC_SITE_URL ??
-    "https://omer-shafique.vercel.app",
+    "https://omerxhafique.vercel.app",
   metaDescription:
     "Muhammad Omer Shafique — full stack developer building Python APIs, cloud systems, GenAI features, and React, Flutter, and Swift clients. Pakistan · remote-friendly.",
   seoKeywords: [

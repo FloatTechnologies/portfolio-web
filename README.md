@@ -2,7 +2,7 @@
 
 Personal portfolio site built with [Next.js](https://nextjs.org) (App Router), React, and Tailwind CSS.
 
-**Live:** [https://omer-shafique.vercel.app](https://omer-shafique.vercel.app)
+**Live:** [https://omerxhafique.vercel.app](https://omerxhafique.vercel.app)
 
 ## Stack
 
@@ -55,7 +55,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical URL (no trailing slash). Used for metadata, sitemap, and JSON-LD. Example: `https://omer-shafique.vercel.app` |
+| `NEXT_PUBLIC_SITE_URL` | Recommended | Canonical URL (no trailing slash). Used for metadata, sitemap, and JSON-LD. Example: `https://omerxhafique.vercel.app` |
 | `NEXT_PUBLIC_GA_ID` | Optional | Google Analytics 4 measurement ID |
 
 Set these in Vercel under **Project → Settings → Environment Variables** for production.
