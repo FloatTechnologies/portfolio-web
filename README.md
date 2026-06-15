@@ -70,7 +70,7 @@ Set these in Vercel under **Project → Settings → Environment Variables** for
 ### GitHub Pages setup (one-time)
 
 1. Create a [Personal Access Token](https://github.com/settings/tokens) (classic) with **`repo`** scope for account `omerxhafique`.
-2. In **FloatTechnologies/portfolio-web** → **Settings → Secrets and variables → Actions**, add **`GH_PAGES_DEPLOY_TOKEN`** with that token.
+2. In **FloatTechnologies/portfolio-web** → **Settings → Secrets and variables → Actions**, add **`GH_PAGES_DEPLOY_TOKEN`**: a [classic PAT](https://github.com/settings/tokens) with **`repo`** scope for `omerxhafique` (must be able to push to `omerxhafique.github.io`). *(Already configured for this repo.)*
 3. On [omerxhafique.github.io](https://github.com/omerxhafique/omerxhafique.github.io) → **Settings → Pages**, set **Source** to deploy from branch **`main`** / **`/ (root)`**.
 4. Push to `main` or run the **Deploy GitHub Pages** workflow manually.
 
