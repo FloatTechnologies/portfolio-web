@@ -11,9 +11,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    "src/moncypf/**",
-    "src/utils/textSplitter.ts",
-    "public/draco/**",
   ]),
 ]);
 

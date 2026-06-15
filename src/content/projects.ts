@@ -272,5 +272,3 @@ const raw: Project[] = [
 ];
 
 export const projects = raw;
-export const caseStudies = raw.filter((p) => p.featured);
-export const moreProjects = raw.filter((p) => !p.featured);

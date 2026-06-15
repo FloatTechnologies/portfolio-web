@@ -46,19 +46,3 @@ export type ExperienceEntry = {
   bullets: string[];
   accent: "primary" | "blue" | "teal" | "muted";
 };
-
-export type SkillItem = {
-  title: string;
-  image: string;
-};
-
-export type SkillGroup = {
-  id: string;
-  label: string;
-  items: SkillItem[];
-};
-
-export type ApproachPrinciple = {
-  title: string;
-  body: string;
-};
